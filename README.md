@@ -68,7 +68,7 @@ To set up the application on your local machine, follow these steps:
    solutions.
 
 ## License
-ManagingCredentials is licensed under the MIT License. See the LICENSE file for more information.
+ManagingCredentials is licensed under the HyperionDev License. See the LICENSE file for more information.
 
 ## Contact
 For questions, suggestions, or feedback, please reach out to:
