@@ -1,7 +1,7 @@
 // change seeder to import ""
 import mongoose from 'mongoose';
 import Credential from '../models/Credential';
-import Division from '../models/Division';
+import Division from '../models/Division.js';
 import bcrypt from 'bcryptjs';
 
 // Sample data to be inserted into the Credential collection
