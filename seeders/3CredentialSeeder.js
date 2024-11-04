@@ -1,6 +1,6 @@
 // change seeder to import ""
 import mongoose from 'mongoose';
-import Credential from '../models/Credential';
+import Credential from '../models/Credential.js';
 import Division from '../models/Division.js';
 import bcrypt from 'bcryptjs';
 
