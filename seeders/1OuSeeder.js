@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import OU from '../models/Ou';
+import Ou from '../models/Ou.js';
 
 // Sample data to be inserted into the collection
 const sampleOUs = [
@@ -43,8 +43,8 @@ const connectDB = async () => {
 const seedDB = async () => {
     try {
         // Clear existing data
-        await OU.deleteMany();
-        const insertedData = await OU.insertMany(sampleOUs);
+        await Ou.deleteMany();
+        const insertedData = await Ou.insertMany(sampleOUs);
         console.log('Sample data inserted:', insertedData);
     } catch (error) {
         console.error('Error inserting data:', error);
