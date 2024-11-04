@@ -1,6 +1,6 @@
-# managingCredentials
+# Managing-Credentials
 
-ManagingCredentials is a comprehensive application designed to handle credential management efficiently. From user registration to login, this project facilitates the management of credentials based on user roles, including normal users, management, and administrators. 
+Managing-Credentials is a comprehensive application designed to handle credential management efficiently. From user registration to login, this project facilitates the management of credentials based on user roles, including normal users, management, and administrators. 
 
 # Table of contents
 - [Project Details](#project-details)
