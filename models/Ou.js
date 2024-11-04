@@ -7,4 +7,4 @@ const OUSchema = new mongoose.Schema({
 });
 
 // Export OU model to be used in other parts of the application
-export default mongoose.model('OU', OUSchema);
+export default mongoose.model('Ou', OUSchema);
