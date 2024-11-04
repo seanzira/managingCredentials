@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import User from '../models/User.js';
+import bcrypt from 'bcrypt';
 
 // Sample data to be inserted into the collection
 const sampleUsers = [
