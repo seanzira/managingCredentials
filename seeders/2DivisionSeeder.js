@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import Division from '../models/Division';
+import Division from '../models/Division.js';
 
 // Sample data to be inserted into the collection
 const sampleDivisions = [
