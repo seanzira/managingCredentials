@@ -51,7 +51,7 @@ To set up the application on your local machine, follow these steps:
    To seed the database, you might need to run a seeding script, to which you can 
    run:
    ```bash
-   npm run seed
+   npm run _seeder_file
 6. **Start the application**
    Launch the app by typing:
    ```bash
