@@ -9,7 +9,6 @@ import Login from './components/Login';
 import AddCredential from './components/AddCredential';
 import UpdateCredential from './components/UpdateCredential';
 import AssignUser from './components/AssignUser';
-import ChangeUserRole from './components/ChangeUserRole';
 import Profile from './components/Profile';
 
 // Protecting routes that require authentication
@@ -33,7 +32,6 @@ const App = () => {
               <Route path="/add-credential" element={<ProtectedRoute element={<AddCredential />} />} />
               <Route path="/update-credential" element={<ProtectedRoute element={<UpdateCredential />} />} />
               <Route path="/assign-user" element={<ProtectedRoute element={<AssignUser />} />} />
-              <Route path="/change-role" element={<ProtectedRoute element={<ChangeUserRole />} />} />
             </Routes>
           </div>
         </Router>
