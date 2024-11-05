@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useMessage } from '../components/SetMessage';
 
 // AssignUser component
-const AssignUser = ({ setMessage }) => {
+const AssignUser = () => {
+    const { setMessage} = useMessage();
     const [userId, setUserId] = useState('');
     const [divisionId, setDivisionId] = useState('');
 
@@ -22,7 +24,7 @@ const AssignUser = ({ setMessage }) => {
             setUserId('');
             setDivisionId('');
 
-            alert('user assignment successful!');
+            alert('User assignment successful!');
         } catch (error) {
             setMessage(error.response?.data?.message || 'Server error');
         }
