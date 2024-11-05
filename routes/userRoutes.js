@@ -7,21 +7,10 @@ import User from '../models/User.js';
 import Ou from '../models/Ou.js';      
 import verifyToken from '../verifyToken/verifyToken.js';
 
-const app = express();
-const PORT = process.env.PORT || 8000;
-
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
+const router = express.Router();
 
 // Registration endpoint
-app.post('/register', async (req, res) => {
-    console.log("Register endpoint hit");
+router.post('/register', async (req, res) => {
     const { username, password, ou } = req.body;
 
     // Check if required fields are provided
@@ -106,10 +95,5 @@ app.get('/profile', verifyToken, async (req, res) => {
     }
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
 // export the app to be used in other parts of this code
-export default app;
+export default router;
