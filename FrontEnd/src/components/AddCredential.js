@@ -16,7 +16,7 @@ const AddCredential = ({ setMessage }) => {
         try {
 
             // send post request to add a new credential
-            const response = await axios.post('http://localhost:3001/api/credential/add-credential', {
+            const response = await axios.post(`http://localhost:3001/api/credentials/add-credentials`, {
                 username,
                 password,
                 service,
