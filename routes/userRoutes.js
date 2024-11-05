@@ -1,8 +1,6 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import cors from 'cors';
 import User from '../models/User.js'; 
 import Ou from '../models/Ou.js';      
 import verifyToken from '../verifyToken/verifyToken.js';
@@ -78,7 +76,8 @@ router.post('/login', async (req, res) => {
         res.json({ token, user: { username: user.username, role: user.role, ou: user.ou } });
         
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        console.error('Error during login:', error); 
+        res.status(500).json({ message: 'Server error: ' + error.message });
     }
 });
 
