@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useMessage } from '../components/SetMessage';
 
 // UpdateCredential component
-const UpdateCredential = ({ setMessage }) => {
+const UpdateCredential = () => {
+    const { setMessage} = useMessage();
     const [credentialId, setCredentialId] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -13,7 +15,7 @@ const UpdateCredential = ({ setMessage }) => {
         const token = localStorage.getItem('token');
         try {
             // sending PUT request to update the credential
-            const response = await axios.put(`http://localhost:8000/api/credential/update-credential/${credentialId}`, {
+            const response = await axios.put(`http://localhost:3001/api/credentials/update-credential/${credentialId}`, {
                 username,
                 password,
                 service,
