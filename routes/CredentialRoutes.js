@@ -32,7 +32,7 @@ router.get('/division/:id/credentials', verifyToken, async (req, res) => {
 });
 
 // Endpoint for adding a credential
-router.post('/add-credential', async (req, res) => {
+router.post('/add-credentials', async (req, res) => {
     const { username, password, service, divisionId } = req.body;
 
     // Check if required fields are provided
