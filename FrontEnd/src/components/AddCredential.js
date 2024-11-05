@@ -13,6 +13,7 @@ const AddCredential = ({ setMessage }) => {
 
         // retrieve JWT from storage
         const token = localStorage.getItem('token');
+        console.log("Token: ", token);
         try {
 
             // send post request to add a new credential
@@ -24,7 +25,11 @@ const AddCredential = ({ setMessage }) => {
             }, {
                 headers: { Authorization: `Bearer ${token}` },
             });
-            setMessage(response.data.message);
+
+            if (response.data.message) {
+                setMessage(response.data.message);
+              }
+            
             setUsername('');
             setPassword('');
             setService('');
@@ -33,9 +38,9 @@ const AddCredential = ({ setMessage }) => {
             // alert the user when successful
             alert('Credential successfully added!');
         } catch (error) {
-
             // alert the user when unsuccessful
-            alert('Credential unsuccessfully added!');
+            console.error('Error adding credential:', error.response?.data || error.message);
+            alert('Credential unsuccessfully added..');
         }
     };
 
