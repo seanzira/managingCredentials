@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     role: { type: String, enum: ['admin', 'management', 'normal'], default: 'normal' },
-    ou: { type: mongoose.Schema.Types.ObjectId, ref: 'OU' }, 
+    ou: { type: mongoose.Schema.Types.ObjectId, ref: 'Ou' }, 
     division: { type: mongoose.Schema.Types.ObjectId, ref: 'Division' },
 });
 
