@@ -52,7 +52,7 @@ router.post('/register', async (req, res) => {
 });
 
 // Login endpoint
-app.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
@@ -83,7 +83,7 @@ app.post('/login', async (req, res) => {
 });
 
 // Protected route example
-app.get('/profile', verifyToken, async (req, res) => {
+router.get('/profile', verifyToken, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).populate('ou');
         if (!user) {
