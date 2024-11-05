@@ -13,7 +13,6 @@ const Home = () => {
                 <li><Link to="/add-credential">Add Credential</Link></li>
                 <li><Link to="/update-credential">Update Credential</Link></li>
                 <li><Link to="/assign-user">Assign User</Link></li>
-                <li><Link to="/change-role">Change User Role</Link></li>
             </ul>
         </div>
     );
